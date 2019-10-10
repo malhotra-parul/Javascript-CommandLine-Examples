@@ -1,0 +1,37 @@
+var readlineSync = require('readline-sync');
+console.log("Welcome to the menu.");
+
+//User inputs 1 or q.
+var menuOption = readlineSync.question("Enter '1' to check if a character is a vowel and 'q' to quit.");
+
+do{
+    if(menuOption == 'Q'){
+        menuOption = menuOption.toLowerCase();
+                        } // If user enters 'Q' instead of 'q', he will still be able to quit.
+
+switch(menuOption){
+case '1': //checking for even or odd
+    var inputChar = readlineSync.question("Input Character to check if it's a vowel- ");
+    if(inputChar=='a' || inputChar=='e' || inputChar=='i' || inputChar=='o' || inputChar=='u'
+    || inputChar=='A' || inputChar=='E' || inputChar=='I' || inputChar=='O' || inputChar=='U')
+    {
+        console.log("It is a vowel.");
+    }else{
+        console.log("It is a consonant.");
+    }
+    break;
+case 'q': //breaking from switch case if user has chosen 'q'
+    console.log("Exiting!");
+    break;
+default: //In case user enters something random.
+    console.log("Your input is invalid. Please pick either '1' or 'q'.");
+}
+
+if(menuOption == 'q'){ break; } 
+//his is needed to  break from the do while loop in case when user has chosen quit.
+
+//rechecking if user wants to try once more or quit here.
+var recheckInput = readlineSync.question("Do you wish to continue - Pick 'y' or 'q'.");
+//converting to lower case again.
+recheckInput = recheckInput.toLowerCase();
+}while(recheckInput!='q');

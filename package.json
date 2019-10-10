@@ -1,0 +1,27 @@
+{
+  "name": "dummy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "one": "node js_1.js",
+    "two": "node js_2.js",
+    "three": "node js_3.js",
+    "four": "node js_4.js",
+    "five": "node js_5.js",
+    "six": "node js_6.js",
+    "seven": "node js_7.js",
+    "eight": "node js_8.js",
+    "nine": "node js_9.js",
+    "ten": "node js_10.js"
+    
+  },
+  "keywords": [],
+  "author": "parul",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "yargs": "^14.2.0"
+  }
+}
